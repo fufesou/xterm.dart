@@ -263,6 +263,7 @@ class TerminalViewState extends State<TerminalView> {
         onComposing: _onComposing,
         onAction: (action) {
           _scrollToBottom();
+          debugPrint(' ============================= performAction $action');
           // Android sends TextInputAction.newline when the user presses the virtual keyboard's enter key.
           if (action == TextInputAction.done || action == TextInputAction.newline) {
             widget.terminal.keyInput(TerminalKey.enter);
