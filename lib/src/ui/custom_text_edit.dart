@@ -240,7 +240,7 @@ class CustomTextEditState extends State<CustomTextEdit> with TextInputClient {
 
   @override
   void performAction(TextInputAction action) {
-    // print('performAction $action');
+    print(' ============================= performAction $action');
     widget.onAction(action);
   }
 
